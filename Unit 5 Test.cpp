@@ -12,23 +12,29 @@ int main()
 {
 	string ct = "", et = "", bs = "";
 	int a = 0, r = 0, len = 0;
-
+	char ch;
 
 	cout << "Enter clear text: " << endl;
 	getline(cin, ct);
 
 
-
-	len = ct.length();
-
-	do
+	for (int i = 0; i < ct.size(); i++)
 	{
-		r = a % 2;
-		a = a / 2;
-		bs.append(to_string(r));
 
-	} while (a > 0);
+		ch = ct.substr(0, 1);
 
-			cout << bs << endl;
+
+		do
+		{
+			r = a % 2;
+			a = a / 2;
+			bs.append(to_string(r));
+
+		} while (a > 0);
+	}
+
+	
+
+	cout << bs << endl;
 
 }
